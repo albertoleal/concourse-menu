@@ -15,6 +15,7 @@ var _ = Describe("Client", func() {
 	var (
 		server *ghttp.Server
 
+		client fly.Client
 		concourseURL string
 		username     string
 		password     string
