@@ -21,6 +21,8 @@ type Client interface {
 	ConcourseURL() string
 	Builds(concourse.Page) ([]atc.Build, concourse.Pagination, error)
 	BuildEvents(buildID string) ([]byte, error)
+	Pipeline(name string) (atc.Pipeline, error)
+	Team() concourse.Team
 }
 
 type client struct {
@@ -44,6 +46,30 @@ func NewClient(concourseURL, username, password, team string) *client {
 
 func (c *client) ConcourseURL() string {
 	return c.concourseURL
+}
+
+func (c *client) Team() concourse.Team {
+	cli, err := c.concourseClient()
+	if err != nil {
+		return nil
+	}
+
+	return cli.Team(c.team)
+}
+
+func (c *client) Pipeline(name string) (atc.Pipeline, error) {
+	cli, err := c.concourseClient()
+	if err != nil {
+		return atc.Pipeline{}, err
+	}
+
+	team := cli.Team(c.team)
+	pipeline, _, err := team.Pipeline(name)
+	if err != nil {
+		return atc.Pipeline{}, err
+	}
+
+	return pipeline, nil
 }
 
 func (c *client) Builds(page concourse.Page) ([]atc.Build, concourse.Pagination, error) {
