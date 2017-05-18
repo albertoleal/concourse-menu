@@ -29,12 +29,12 @@ var (
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/", hello)
+	mux.HandleFunc("/", index)
 
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }
 
-func hello(w http.ResponseWriter, r *http.Request) {
+func index(w http.ResponseWriter, r *http.Request) {
 	client := fly.NewClient(target, username, password, team)
 	builds, _, err := client.Builds(concourse.Page{Limit: 20})
 	if err != nil {
