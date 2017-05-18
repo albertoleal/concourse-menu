@@ -1,0 +1,76 @@
+{
+	"ImportPath": "github.com/albertoleal/concourse-menu",
+	"GoVersion": "go1.8",
+	"GodepVersion": "v77",
+	"Deps": [
+		{
+			"ImportPath": "github.com/albertoleal/concourse-metrics/fly",
+			"Rev": "b49a2e1ed8a23b049d7868cf2055904212d185e5"
+		},
+		{
+			"ImportPath": "github.com/bmizerany/pat",
+			"Rev": "c068ca2f0aacee5ac3681d68e4d0a003b7d1fd2c"
+		},
+		{
+			"ImportPath": "github.com/concourse/atc",
+			"Rev": "a1498508183d1b3e8d64d4fde1135fd2ef8489ae"
+		},
+		{
+			"ImportPath": "github.com/concourse/atc/event",
+			"Rev": "a1498508183d1b3e8d64d4fde1135fd2ef8489ae"
+		},
+		{
+			"ImportPath": "github.com/concourse/go-concourse/concourse",
+			"Rev": "c8e9f6a652cceaa9a1b4aeca94dbaf9beacc0094"
+		},
+		{
+			"ImportPath": "github.com/concourse/go-concourse/concourse/eventstream",
+			"Rev": "c8e9f6a652cceaa9a1b4aeca94dbaf9beacc0094"
+		},
+		{
+			"ImportPath": "github.com/concourse/go-concourse/concourse/internal",
+			"Rev": "c8e9f6a652cceaa9a1b4aeca94dbaf9beacc0094"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/errwrap",
+			"Rev": "7554cd9344cec97297fa6649b055a8c98c2a1e55"
+		},
+		{
+			"ImportPath": "github.com/hashicorp/go-multierror",
+			"Rev": "ed905158d87462226a13fe39ddf685ea65f1c11f"
+		},
+		{
+			"ImportPath": "github.com/mitchellh/mapstructure",
+			"Rev": "cc8532a8e9a55ea36402aa21efdf403a60d34096"
+		},
+		{
+			"ImportPath": "github.com/peterhellberg/link",
+			"Comment": "v1.0.0-3-g3eea38c",
+			"Rev": "3eea38ca14b7b3252feea5daf92be3864209eb1d"
+		},
+		{
+			"ImportPath": "github.com/tedsuo/rata",
+			"Rev": "b15ebd8bd97ae9202eb00c076d59b2f2824bce37"
+		},
+		{
+			"ImportPath": "github.com/vito/go-sse/sse",
+			"Rev": "fd69d275caac5d78d793e77ddbe9bd2001d9b88d"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "313cf39d4ac368181bce6960ac9be9e7cee67e68"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2",
+			"Rev": "a6bd8cefa1811bd24b86f8902872e4e8225f74c4"
+		},
+		{
+			"ImportPath": "golang.org/x/oauth2/internal",
+			"Rev": "a6bd8cefa1811bd24b86f8902872e4e8225f74c4"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "4c78c975fe7c825c6d1466c42be594d1d6f3aba6"
+		}
+	]
+}
