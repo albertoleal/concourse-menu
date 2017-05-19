@@ -44,15 +44,15 @@ func index(w http.ResponseWriter, r *http.Request) {
 	rmq_1_8_product := createProject("rabbitmq-1.8", "PRODUCT", "RabbitMQ-1.8: Product")
 	rmq_1_8_cleanup := createProject("rabbitmq-1.8", "CLEANUP", "RabbitMQ-1.8: Cleanup")
 
-	rmq_1_9_release := createProject("rabbitmq-awesome", "RELEASE", "RabbitMQ-1.9: Release")
-	rmq_1_9_product := createProject("rabbitmq-awesome", "PRODUCT", "RabbitMQ-1.9: Product")
-	rmq_1_9_cleanup := createProject("rabbitmq-awesome", "CLEANUP", "RabbitMQ-1.9: Cleanup")
+	rmq_1_9_release := createProject("rabbitmq", "RELEASE", "RabbitMQ-1.9: Release")
+	rmq_1_9_product := createProject("rabbitmq", "PRODUCT", "RabbitMQ-1.9: Product")
+	rmq_1_9_cleanup := createProject("rabbitmq", "CLEANUP", "RabbitMQ-1.9: Cleanup")
 
 	cf_rmq_release_1_8 := createProject("rabbitmq-1.8", "CF-RABBITMQ-SERVER", "RabbitMQ-1.8: CF RMQ Server")
-	cf_rmq_release_1_9 := createProject("rabbitmq-awesome", "CF-RABBITMQ-SERVER", "RabbitMQ-1.9: CF RMQ Server")
+	cf_rmq_release_1_9 := createProject("rabbitmq", "CF-RABBITMQ-SERVER", "RabbitMQ-1.9: CF RMQ Server")
 
-	cf_rmq_broker_release_1_9 := createProject("rabbitmq-awesome", "MULTITENANT-BROKER", "RabbitMQ-1.9: Multi-tenant broker")
-	cf_rmq_metrics_1_9 := createProject("rabbitmq-awesome", "RABBITMQ-METRICS", "RabbitMQ-1.9: Metrics")
+	cf_rmq_broker_release_1_9 := createProject("rabbitmq", "MULTITENANT-BROKER", "RabbitMQ-1.9: Multi-tenant broker")
+	cf_rmq_metrics_1_9 := createProject("rabbitmq", "RABBITMQ-METRICS", "RabbitMQ-1.9: Metrics")
 
 	out := fmt.Sprintf("<Projects>%s%s%s%s%s%s%s%s%s%s%s%s%s</Projects>", rmq_1_7_release, rmq_1_7_product, rmq_1_7_cleanup, rmq_1_8_release, rmq_1_8_product, rmq_1_8_cleanup, rmq_1_9_release, rmq_1_9_product, rmq_1_9_cleanup, cf_rmq_release_1_9, cf_rmq_release_1_8, cf_rmq_broker_release_1_9, cf_rmq_metrics_1_9)
 	io.WriteString(w, out)
